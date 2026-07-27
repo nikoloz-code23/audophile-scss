@@ -1,0 +1,94 @@
+@use './variables/_fonts.scss' as fontVar;
+@use './variables/_colors.scss' as colorVar;
+
+@use './partials/buttons.scss';
+@use './partials/header.scss';
+@use './partials/product.scss';
+@use './partials/circle.scss';
+@use './partials/bigProduct.scss';
+@use './partials/mediumProduct.scss';
+@use './partials/smallProduct.scss';
+@use './partials/lastSection.scss';
+@use './partials/footer.scss';
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @include fontVar.font-settings(true);
+    font-size: 3.5rem;
+    line-height: 58px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    @include fontVar.font-settings(true);
+    font-size: 2.5rem;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+}
+
+h3 {
+    @include fontVar.font-settings(true);
+    font-size: 2rem;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+}
+
+h4 {
+    @include fontVar.font-settings(true);
+    font-size: 1.75rem;
+    line-height: 38px;
+    letter-spacing: 2px;
+}
+
+h5 {
+    @include fontVar.font-settings(true);
+    font-size: 1.5rem;
+    line-height: 33px;
+    letter-spacing: 1.7px;
+}
+
+h6 {
+    @include fontVar.font-settings(true);
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+}
+
+.overline {
+    @include fontVar.font-settings;
+    font-size: .875rem;
+    line-height: 19px;
+    letter-spacing: 10px;
+}
+
+.subtitle {
+    @include fontVar.font-settings(true);
+    font-size: .8125rem;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+a {
+    @include fontVar.font-settings(true);
+    
+    font-size: .8125rem;
+    line-height: 25px;
+    letter-spacing: 2px;
+    
+    color: colorVar.$white;
+    transition: .1s;
+    text-decoration: none;
+
+    &:hover {
+        filter: brightness(0) saturate(100%) invert(51%) sepia(47%) saturate(601%) hue-rotate(338deg) brightness(100%) contrast(89%);
+    }
+}
+
+p {
+    @include fontVar.body-text;
+}

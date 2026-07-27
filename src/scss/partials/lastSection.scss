@@ -1,0 +1,109 @@
+@use '../variables/_colors.scss' as colorVar;
+@use '../variables/_path.scss' as pathVar;
+@use '../variables/_media.scss' as mediaVar;
+
+.lastSection {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+
+    max-width: 69.375rem;
+    height: 36.75rem;
+
+    span {
+        color: colorVar.$brown;
+    }
+
+    p {
+        color: colorVar.$gray;
+    }
+
+    .lastSectionInfo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 33.75rem;
+    }
+
+    .image {
+        display: none;
+    }
+
+    div {
+        width: 27.8125rem;
+    }
+    
+    .lastSectionImage {
+        width: 33.75rem;
+        height: 36.75rem;
+        overflow: hidden;
+
+        background-image: url('#{pathVar.$baseDirectory}/src/public/img/man_using_gear.png');
+        background-repeat: no-repeat;
+        background-position: bottom -26rem left -15rem;
+        border-radius: 0.8rem;
+    }
+}
+
+@media (max-width: mediaVar.$tablet) {
+    .lastSection {
+        width: 94vw;
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+
+        .lastSectionImage {
+            width: 94vw;
+            height: 18.75rem;
+            background-image: none;
+        }
+
+        .lastSectionInfo {
+            width: 70vw;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .image {
+            display: inline-block;
+            position: relative;
+            left: -1rem;
+            top: -10vw;
+            width: 156vw;
+        }
+
+        div {
+            width: inherit;
+        }
+    }
+}
+
+@media (max-width: mediaVar.$phone) {
+    .lastSection {
+        width: 87vw;
+        height: auto;
+        margin-top: 8rem;
+
+        .lastSectionImage {
+            width: inherit;
+            height: 18.75rem;
+        }
+        
+        .lastSectionInfo {
+            width: inherit;
+        }
+
+        .image {
+            left: -12rem;
+            top: -5rem;
+            width: 70rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+}

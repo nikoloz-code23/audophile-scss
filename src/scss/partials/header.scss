@@ -1,0 +1,166 @@
+@use '../variables/_path.scss' as baseDir;
+@use '../variables/_fonts.scss' as fontVar;
+@use '../variables/_colors.scss' as colorVar;
+@use '../variables/_media.scss' as mediaVar;
+
+header {
+    background-color: colorVar.$dark-gray;
+    margin: 0;
+    padding: 2rem;
+}
+
+.altHeader {
+    display: none;
+}
+
+.headerProduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 0 5rem;
+
+    .productInfo {
+        width: 24rem;
+        z-index: 0;
+    }
+
+    .overline {
+        margin: 2rem 0;
+        color: colorVar.$gray;
+    }
+
+    h1 {
+        margin: 2rem 0;
+        color: colorVar.$white;
+    }
+
+    .body {
+        margin: 2rem 0;
+        width: 22rem;
+        color: colorVar.$light-gray;
+    }
+}
+
+.headerImage {
+    min-width: 20rem;
+    max-width: 36rem;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#sandwich {
+    cursor: pointer;
+    display: none;
+}
+
+.headerNavBarParent {
+    margin: 0 auto;
+
+    max-width: 68rem;
+    height: auto;
+    border-bottom: 1px solid colorVar.$gray;
+    padding-bottom: 1rem;
+}
+
+.headerNavBar {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        display:flex;
+        align-items: center;
+    }
+}
+
+.navbar {
+    display: flex;
+    gap: 1.5em;
+}
+
+@media (max-width: mediaVar.$tablet) {
+    header {
+        height: 38rem;
+    }
+
+    .headerProduct {
+        height: 32rem;
+        text-align: center;
+
+        .productInfo {
+            position: absolute;
+            z-index: 1;
+        }
+    }
+    
+    .headerImage {
+        z-index : 0;
+        position: absolute;
+        opacity: 20%;
+        min-width: 22rem;
+        max-width: 40rem;
+    }
+    
+    .altHeader {
+        display: none;
+    }
+
+    #sandwich {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+}
+
+@media (max-width: mediaVar.$phone) {
+    .productInfo {
+        .overline {
+            margin-top: 3rem;
+        }
+
+        h1 {
+            margin: 2rem auto;
+            margin-top: 1rem;
+            font-size: 2.5rem;
+            line-height: 40px;
+        }
+
+        .body {
+            width: 70vw;
+            margin: 1rem auto;
+        }
+
+        .button1 {
+            margin: 1rem 0;
+        }
+    }
+
+    .headerLogo {
+        display: none;
+    }
+
+    .headerNavBar {
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .headerLogo {
+        gap: 0;
+    }
+
+    .altHeader {
+        display: inline-block;
+    }
+
+    .altHeaderNavBar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}

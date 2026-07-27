@@ -1,0 +1,132 @@
+@use '../variables/_colors.scss' as colorVar;
+@use '../variables/_path.scss' as pathVar;
+@use '../variables/_media.scss' as mediaVar;
+
+footer {
+    background-color: colorVar.$dark-gray;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 2rem;
+    padding-top: 0;
+
+    .orangeLineParent {
+        max-width: 69rem;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .orangeLine {
+        position: relative;
+        padding: .15rem;
+        background-color: colorVar.$brown;
+        width: 5rem;
+    }
+
+    .headerNavBarParent {
+        padding: 2rem 0;
+        border-bottom: none;
+    }
+
+    .descriptionLinkParent {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 68rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .descriptionBody {
+        margin: 0;
+        width: 33rem;
+        color: colorVar.$gray;
+    }
+
+    .copyright {
+        display: flex;
+        margin: 0 auto;
+        max-width: 68rem;
+        justify-content: flex-start;
+        flex-direction: row;
+
+        p {
+            color: colorVar.$gray;
+            font-weight: bold;
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navbarCopyright {
+    display: none;
+}
+
+@media (max-width: mediaVar.$tablet) {
+    footer {
+        .orangeLine {
+            position: relative;
+            padding: .15rem;
+            background-color: colorVar.$brown;
+            width: 5rem;
+            margin-left: 0;
+        }
+
+        .copyright {
+            justify-content: space-between;
+        }
+
+        .footerNavBarParent {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .footerNavBar {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .navbarFooter {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .navbarCopyright {
+        display: flex;
+    }
+}
+
+@media (max-width: mediaVar.$phone) {
+    footer {
+        text-align: center;
+
+        .headerLogo {
+            display: inline-block;
+        }
+
+        .orangeLine {
+            margin: 0 auto;
+        }
+
+        .navbarFooter {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .descriptionBody {
+            width: 82vw;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .copyright {
+            align-items: center;
+            gap: 1.5rem;
+            flex-direction: column;
+        }
+    }
+}

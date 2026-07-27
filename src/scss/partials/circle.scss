@@ -1,0 +1,7 @@
+@use '../variables/_colors.scss' as colorVar;
+
+#circle {
+    position: absolute;
+    border: 1px solid;
+    border-radius: 100%;
+}

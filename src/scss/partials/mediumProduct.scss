@@ -1,0 +1,64 @@
+@use '../variables/_path.scss' as pathVar;
+@use '../variables/_media.scss' as mediaVar;
+
+.mediumProduct {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    max-width: 69.375rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    overflow: hidden;
+    height: 20rem;
+
+    .mediumProductInfo {
+        display: flex;
+        position: absolute;
+        left: 6rem;
+        top: 3rem;
+        justify-content: center;
+        flex-direction: column;
+        width: 20rem;
+    }
+
+    .mediumProductBg {
+        width: 100%;
+        border-radius: .5rem;
+        background-image: url('#{pathVar.$baseDirectory}/src/public/img/zx7.png');
+        background-repeat: no-repeat;
+        background-position: bottom -3rem left 40%;
+    }
+}
+
+@media (max-width: mediaVar.$tablet) {
+    .mediumProduct {
+        width: 94vw;
+
+        .mediumProductInfo {
+            position: absolute;
+            left: 3rem;
+            top: 4rem;
+        }
+
+        .mediumProductBg {
+            background-repeat: no-repeat;
+            background-size: 120%;
+            background-position: bottom left;
+        }
+    }
+}
+
+@media (max-width: mediaVar.$phone) { 
+    .mediumProduct {
+        width: 87vw;
+
+        .mediumProductBg {
+            background-size: 165%;
+            background-position: bottom left -2rem;
+        }
+
+        .mediumProductInfo {
+            left: 1rem;
+        }
+    }
+}

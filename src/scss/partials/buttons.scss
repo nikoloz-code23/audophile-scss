@@ -1,0 +1,74 @@
+@use '../variables/_fonts.scss' as fontVar;
+@use '../variables/_colors.scss' as colorVar;
+
+@mixin button-settings {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: .8125rem;
+    width: 10rem;
+    height: 3rem;
+    transition: .1s;
+    text-align: center;
+}
+
+@mixin button-config($backgroundColor, $color, $border) {
+    background-color: $backgroundColor;
+    color: $color;
+    border: $border;
+    cursor: pointer;
+}
+
+.button1 {
+    @include fontVar.font-settings(true);
+    @include button-settings;
+
+    @include button-config(colorVar.$brown, colorVar.$white, none);
+
+    &:hover {
+        background-color: colorVar.$light-brown;
+    }
+}
+
+.button2 {
+    @include fontVar.font-settings(true);
+    @include button-settings;
+
+    @include button-config(rgba(255, 255, 255, 0), colorVar.$black, 1px solid colorVar.$black);
+
+    &:hover {
+        color: colorVar.$white;
+        background-color: colorVar.$black;
+    }
+}
+
+.button3 {
+    @include fontVar.font-settings(true);
+    @include button-settings;
+
+    @include button-config(rgba(255, 255, 255, 0), colorVar.$black, none);
+
+    &:after {
+        content: ">";
+        padding-left: 0.4rem;
+        color: colorVar.$brown;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    &:hover {
+        color: colorVar.$brown;
+    }
+}
+
+.button4 {
+    @include fontVar.font-settings(true);
+    @include button-settings;
+
+    @include button-config(colorVar.$black, colorVar.$white, none);
+
+    &:hover {
+        background-color: colorVar.$gray;
+    }
+}
