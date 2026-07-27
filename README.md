@@ -10,6 +10,9 @@ The project features:
 - Properly organized SCSS source code.
 - Accurate 1:1 recreation of the Figma design.
 
+# How to preview the website?
+Following this link: https://nikoloz-code23.github.io/audophile-scss/
+
 # How to run the project?
 If you want to locally run the project and mess with it, clone the project:
 ```bash
