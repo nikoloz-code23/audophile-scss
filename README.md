@@ -24,5 +24,5 @@ And run it the following way:
 ./hotreload.sh
 ```
 And if you are on Windows:
-1. Input the filepath of the project inside '/src/scss/variables/path.scss'.
+1. Input the filepath of the project inside `/src/scss/variables/path.scss`.
 2. Run the following command: `sass --watch ./src/scss/main.scss ./src/styles/styles.css` in PowerShell or Windows Terminal.
